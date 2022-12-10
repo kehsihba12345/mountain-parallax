@@ -121,19 +121,22 @@ section img#mountain_front {
   transform: translateY(100px);
 }
 
-.sec {
+.sec,
+.about {
   position: relative;
   padding: 100px;
   background: #1c0522;
 }
 
-.sec h2 {
+.sec h2,
+.about h2 {
   font-size: 3.5em;
   margin-bottom: 10px;
   color: #fff;
 }
 
-.sec p {
+.sec p,
+.about p {
   font-size: 1.2em;
   color: #fff;
 }
