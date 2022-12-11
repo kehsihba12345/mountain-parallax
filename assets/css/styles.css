@@ -19,7 +19,7 @@ body {
   background: linear-gradient(var(--main-dark-color), var(--main-light-color));
 }
 header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -63,10 +63,12 @@ header ul li a.active {
   color: var(--main-dark-color);
 }
 
-section {
+.home {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 102vh;
+  border: 0 0 50px 0;
+  border-color: linear-gradient(to top, #1c0522, transparent);
   padding: 100px;
   display: flex;
   justify-content: center;
@@ -74,7 +76,7 @@ section {
   overflow: hidden;
 }
 
-section::before {
+.home::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -84,7 +86,7 @@ section::before {
   z-index: 1000;
 }
 
-section img {
+.home img {
   position: absolute;
   top: 0;
   left: 0;
@@ -94,10 +96,10 @@ section img {
   pointer-events: none;
 }
 
-section img#moon {
+.home img#moon {
   mix-blend-mode: screen;
 }
-section img#mountain_front {
+.home img#mountain_front {
   z-index: 10;
 }
 #text {
@@ -107,6 +109,8 @@ section img#mountain_front {
   white-space: nowrap;
   font-size: 7.5vw;
   z-index: 9;
+  transform: translateY(-180px);
+  overflow: hidden;
 }
 
 #btn {
@@ -121,22 +125,25 @@ section img#mountain_front {
   transform: translateY(100px);
 }
 
-.sec,
-.about {
+.about,
+.skills,
+.contact {
   position: relative;
   padding: 100px;
   background: #1c0522;
 }
 
-.sec h2,
-.about h2 {
+.about h2,
+.skills h2,
+.contact h2 {
   font-size: 3.5em;
   margin-bottom: 10px;
   color: #fff;
 }
 
-.sec p,
-.about p {
+.about p,
+.skills p,
+.contact p {
   font-size: 1.2em;
   color: #fff;
 }
